@@ -1,0 +1,17 @@
+{
+  "top": {
+    "title": "Sample Web",
+    "description": "Sample Web の説明文。",
+    "author": "Sample Web の制作者。"
+  },
+  "recruit": {
+    "title": "募集要項 | Sample Web",
+    "description": "募集要項の説明文。",
+    "author": "募集要項の製作者。"
+  },
+  "form": {
+    "title": "応募フォーム | Sample Web",
+    "description": "応募フォームの説明文",
+    "author": "応募フォームの製作者"
+  }
+}

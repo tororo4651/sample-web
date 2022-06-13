@@ -1,0 +1,29 @@
+<%
+  if (typeof footerBtnModifier === 'undefined') {
+    var footerBtnModifier = "";
+  }
+%>
+
+<footer class="footer">
+  <a class="footer__btn <%= footerBtnModifier %> primaryBtn primaryBtn--02" href="/recruit/"><%= buttonText %></a>
+
+  <nav class="footer__nav">
+    <ul class="footer__navList">
+      <li class="footer__navItem">
+        <a class="footer__navLink" href="/company/">会社概要</a>
+      </li>
+
+      <li class="footer__navItem">
+        <a class="footer__navLink" href="/service">サービス内容</a>
+      </li>
+
+      <li class="footer__navItem">
+        <a class="footer__navLink" href="/blog/">スタッフブログ</a>
+      </li>
+
+      <li class="footer__navItem">
+        <a class="footer__navLink" href="/contact/">お問い合わせ</a>
+      </li>
+    </ul>
+  </nav>
+</footer>

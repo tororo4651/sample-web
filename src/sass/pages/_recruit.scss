@@ -1,0 +1,13 @@
+// ページ・募集要項
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+.recruit {
+  background-image: url(/images/recruit/bg-job.jpg), linear-gradient(transparent 50%, #f8f6f2 50%);
+  background-repeat: no-repeat;
+  background-position: left 106px, 0% 0%;
+  background-size: 70vw, auto;
+}

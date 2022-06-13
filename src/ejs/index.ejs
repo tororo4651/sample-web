@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('components/common/_head.ejs', top) %>
+
+
+<body class="home">
+
+<%- include('components/common/_header.ejs') %>
+
+
+<section class="topHero l-container">
+  <div class="topHero__content">
+    <h2 class="topHero__heading">一緒に挑戦し続けよう</h2>
+
+    <p class="topHero__text">私たちと一緒にWebの未来を作りませんか？素敵な仲間を募集しています。 「なりたい自分」になれる場所を、きっと見つけられるはずです。</p>
+
+    <a class="topHero__btn primaryBtn primaryBtn--01" href="/recruit/">募集要項を見る</a>
+  </div><!-- /.topHero__content -->
+</section>
+
+<section class="topSection topSection--reverse">
+  <div class="topSection__inner topSection__inner--reverse l-container">
+
+    <div class="topSection__content">
+      <h2 class="topSection__heading primaryHeading">Webデザイナーの活躍する職場です</h2>
+
+      <p class="topSection__text">制作チームではWebデザイナーが一番多く在籍しています。 ただ機能する制作物を作るのではなく、使い勝手がよく美しいものを生み出していきます。 あなたも、誰かの世界が変わるようなクリエイティブなWebサイトを 世界中に広めませんか？</p>
+    </div><!-- topSection__content -->
+
+    <div class="topSection__chart pieChart"></div>
+
+  </div><!-- /.topSection__inner.l-container -->
+</section>
+
+<section class="topSection">
+  <div class="topSection__inner l-container">
+
+    <div class="topSection__content">
+      <h2 class="topSection__heading primaryHeading">あなたの生活にあわせたスタイルで働けます</h2>
+
+      <p class="topSection__text">弊社では東京、大阪のオフィスの他、リモート勤務も可能です。 リモート勤務で活躍している社員は全体の3分の1となり、年々増加しています。 自宅やコワーキングスペースなど、あなたの一番集中できる場所で仕事に取り組んでください。</p>
+    </div><!-- /.topSection__content -->
+
+    <div class="topSection__chart">
+      <div class="barChart"></div>
+
+      <div class="topSection__chartTitle">リモート社員数の推移</div>
+    </div><!-- /.topSection__barGraph -->
+
+  </div><!-- /.topSection__inner.l-container -->
+</section>
+
+
+<%- include('components/common/_footer', {buttonText: "募集要項を見る"}) %>
+
+<%- include('components/common/_script') %>
+
+</body>
+</html>

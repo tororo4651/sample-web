@@ -1,0 +1,61 @@
+// 表・募集要項
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.primaryTable {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__header,
+  &__data {
+    display: block;
+  }
+
+  &__header {
+    padding: 1rem;
+    vertical-align: middle;
+    background-color: #f8f6f2;
+    font-weight: normal;
+  }
+
+  &__data {
+    padding: 0.75rem 1rem 1.75rem;
+    line-height: 1.7;
+  }
+
+
+  @include g.mq('sm-min') {
+
+    &__row {
+
+      &:nth-child(odd) {
+
+        .primaryTable__header,
+        .primaryTable__data {
+          background-color: #f8f6f2;
+        }
+      }
+
+      &:nth-of-type(even) {
+
+        .primaryTable__header,
+        .primaryTable__data {
+          background-color: transparent;
+        }
+      }
+    }
+
+    &__header,
+    &__data {
+      display: revert;
+      padding: 1.25rem;
+    }
+
+    &__header {
+      width: 24%;
+    }
+  }
+}

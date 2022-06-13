@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<%- include('../components/common/_head.ejs', form) %>
+
+
+<body class="form">
+
+<%- include('../components/common/_header.ejs') %>
+
+
+<main class="primaryMain">
+
+  <h2 class="primaryMain__heading primaryHeading primaryHeading--center">応募フォーム</h2>
+
+  <p class="primaryMain__formLead">下記の応募フォームにすべてご記入の上、送信してください。</p>
+
+  <p class="primaryMain__notice">※ファイルの添付はできません。作品のファイルがある場合は必ずアップロードしたURLをご記入ください。</p>
+
+  <form class="primaryMain__form primaryForm" action="#" method="post">
+    <table class="primaryMain__table primaryTable">
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">お名前</th>
+        <td class="primaryTable__data">
+          <input class="primaryForm__input" type="text" name="kanjiName" placeholder="例：大本　真奈美">
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">フリガナ</th>
+        <td class="primaryTable__data">
+          <input class="primaryForm__input" type="text" name="furiganaName" placeholder="例：オオモト　マナミ">
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">メールアドレス</th>
+        <td class="primaryTable__data">
+          <input class="primaryForm__input" type="email" name="email" placeholder="例：hello@example.com">
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">ポートフォリオ</th>
+        <td class="primaryTable__data">
+          <input class="primaryForm__input" type="url" name="url" placeholder="例：http://example.com">
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">希望勤務地</th>
+
+        <td class="primaryTable__data">
+          <label class="primaryForm__label">
+            <input class="primaryForm__checkbox" type="checkbox" name="desiredWorkLocation[]" value="tokyo">
+            東京
+          </label><!-- /.primaryForm__label -->
+
+          <label class="primaryForm__label">
+            <input class="primaryForm__checkbox" type="checkbox" name="desiredWorkLocation[]" value="osaka">
+            大阪
+          </label><!-- /.primaryForm__label -->
+
+          <label class="primaryForm__label">
+            <input class="primaryForm__checkbox" type="checkbox" name="desiredWorkLocation[]" value="remote">
+            リモート勤務
+          </label><!-- /.primaryForm__label -->
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">現在の状態</th>
+
+        <td class="primaryTable__data">
+          <div class="primaryForm__selectWrapper">
+            <select class="primaryForm__select" name="state">
+              <option value="会社に在籍中">会社に在籍中</option>
+              <option value="フリーランス">フリーランス</option>
+              <option value="学生">学生</option>
+              <option value="休職中">休職中</option>
+            </select>
+          </div><!-- /.primaryForm__selectWrapper -->
+        </td>
+      </tr>
+
+      <tr class="primaryTable__row">
+        <th class="primaryTable__header">自己PR</th>
+
+        <td class="primaryTable__data">
+          <textarea class="primaryForm__textarea" name="pr" placeholder="例：これまでの経歴、学んできたこと、今取り組んでいるプロジェクト等"></textarea>
+        </td>
+      </tr>
+    </table>
+
+    <input class="primaryForm__btn primaryBtn primaryBtn--center primaryBtn--01" type="submit" name="send" value="送信する">
+  </form>
+
+</main>
+
+
+<%- include('../components/common/_footer', {buttonText: "応募フォーム", footerBtnModifier: "footer__btn--hidden"}) %>
+
+<%- include('../components/common/_script') %>
+
+</body>
+</html>

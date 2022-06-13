@@ -1,0 +1,39 @@
+<%
+  if (typeof title === 'undefined') {
+    var title = '';
+  }
+
+  if (typeof data === 'undefined') {
+    var data = {
+      head: '',
+      body: ''
+    };
+  }
+%>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title><%= title %></title>
+
+<meta name="description" content="<%- description %>">
+<meta name="author" content="<%= author %>">
+
+<link rel="icon" type="image/svg+xml" href="/images/common/favicon.svg">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css' integrity='sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==' crossorigin='anonymous'/>
+
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/chartist/0.9.8/chartist.min.css' integrity='sha512-RWdDFr1GXC46+K32db6Mb/hdouSBetTDSiTfbLhLXuVjjbwdZs2Or8D3YtVIYLlCQ2MEXtn4gbf309auVhviKg==' crossorigin='anonymous'/>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+</head>

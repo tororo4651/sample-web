@@ -1,0 +1,105 @@
+// セクション・トップページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+// トップページ
+.topSection {
+  padding-block: 4rem;
+
+  &--reverse {
+    background-color: #f8f6f2;
+  }
+
+  &__content {
+    margin-block-end: 2rem;
+  }
+
+  &__heading {
+    margin-block-end: 2.5rem;
+  }
+
+
+  // 円グラフ
+  .ct-series-a .ct-slice-pie {
+    fill: g.$mainColor;
+  }
+
+  .ct-series-b .ct-slice-pie {
+    fill: g.$lightMainColor;
+  }
+
+  .ct-series-c .ct-slice-pie {
+    fill: #9bcbf8;
+  }
+
+  .ct-series-d .ct-slice-pie {
+    fill: #bbb;
+  }
+
+  .ct-label {
+    fill: #fff;
+    font-size: 1rem;
+  }
+
+
+  // 棒グラフ
+  // stroke は、svg のアウトラインの線の色を設定する。
+  .ct-series-a .ct-bar{
+    stroke: g.$lightMainColor;
+  }
+
+  // stroke-width は、線の太さ。
+  .ct-bar {
+    stroke-width: 13%;
+  }
+
+  .barChart {
+    margin-block-end: 0.5rem;
+  }
+
+  &__chartTitle {
+    text-align: center;
+  }
+
+
+  @include g.mq(sm-min) {
+
+    &__inner {
+      display: flex;
+      column-gap: 7%;
+      align-items: center;
+
+      &--reverse {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__content {
+      flex: 3;
+      margin-block-end: 0;
+    }
+
+    &__chart {
+      flex: 2;
+    }
+
+    .ct-label {
+      --min-viewport: 600;
+      --max-viewport: 1200;
+      --min-size: 10;
+      --max-size: 16;
+      font-size: var(--clamp-size);
+    }
+
+    .ct-bar {
+      --min-viewport: 600;
+      --max-viewport: 1200;
+      --min-size: 20;
+      --max-size: 50;
+      stroke-width: var(--clamp-size);
+    }
+  }
+}

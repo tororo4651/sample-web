@@ -1,0 +1,42 @@
+// メインコンテンツ・募集
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.primaryMain {
+  width: 94%;
+  max-width: 900px;
+  margin-inline: auto;
+  margin-block: 100px;
+  padding: 3rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+
+  &__heading {
+    margin-block-end: 2.5rem;
+  }
+
+  &__text {
+    margin-block-end: 3.5rem;
+  }
+
+  &__table {
+    margin-block-end: 3.5rem;
+  }
+
+  &__btn {
+    margin-block-end: 4rem;
+  }
+
+  &__notice {
+    margin-block-end: 3.5rem;
+    font-size: 0.875rem;
+  }
+
+
+  @include g.mq(sm-min) {
+    padding: 5rem;
+  }
+}

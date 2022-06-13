@@ -1,0 +1,41 @@
+// パーツ・ボタン
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+// プライマリ
+.primaryBtn {
+  display: block;
+  padding: 1.25rem;
+  text-align: center;
+  font-family: 'Sawarabi Mincho', serif;
+  font-size: 1.375rem;
+
+  &--01 {
+    background-color: g.$mainColor;
+    color: #fff;
+
+    &:hover {
+      background-color: g.$lightMainColor;
+    }
+  }
+
+  &--02 {
+    background-color: g.$accentColor;
+
+    &:hover {
+      background-color: g.$lightAccentColor;
+    }
+  }
+
+
+  @include g.mq(sm-min) {
+    width: 260px;
+
+    &--center {
+      margin-inline: auto;
+    }
+  }
+}

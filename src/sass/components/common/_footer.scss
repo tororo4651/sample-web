@@ -1,0 +1,59 @@
+// フッター
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.footer {
+  padding: 3.5rem 1rem;
+  background-color: g.$mainColor;
+
+  &__btn {
+    margin-block-end: 4.5rem;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__nav {
+
+    &List {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      align-items: center;
+    }
+
+    &Item {
+      text-align: center;
+      color: #d5d7e4;
+    }
+  }
+
+
+  @include g.mq('sm-min') {
+
+    &__btn {
+      margin-inline: auto;
+      margin-block-end: 3.5rem;
+    }
+
+    &__nav {
+
+      &List {
+        flex-direction: row;
+        gap: 0 1.5rem;
+        justify-content: center;
+      }
+
+      &Item {
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

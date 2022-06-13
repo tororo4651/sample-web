@@ -1,0 +1,45 @@
+// ヒーローイメージ / トップページ
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+.topHero {
+  padding-block: 23vw 3rem;
+  background-image: url(/images/top/bg-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 70vw;
+
+  &__heading {
+    --min-size: 24;
+    --max-size: 40;
+    display: inline-block;
+    margin-block-end: 12vw;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: var(--clamp-size);
+  }
+
+  &__text {
+    margin-block-end: 2rem;
+    font-size: 1.125rem;
+  }
+
+
+  @include g.mq(sm-min) {
+    padding-block: 16vw;
+
+    &__heading {
+      margin-block-end: 2rem;
+      padding: 0;
+      background-color: initial;
+    }
+
+    &__text {
+      width: 38vw;
+    }
+  }
+}

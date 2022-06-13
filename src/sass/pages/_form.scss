@@ -1,0 +1,13 @@
+// ページ・応募フォーム
+
+
+// 変数、ミックスイン、関数
+@use "../global" as g;
+
+
+.form {
+  background-image: url(/images/form/bg-form.jpg), linear-gradient(to bottom, transparent 50%, #f8f6f2 50%);
+  background-repeat: no-repeat;
+  background-position: right 106px, 0% 0%;
+  background-size: 70vw, auto;
+}

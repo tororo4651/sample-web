@@ -1,0 +1,109 @@
+// メインコンテンツ・募集
+
+
+// 変数、ミックスイン、関数
+@use "../../../global" as g;
+
+
+// プライマリ
+.primaryForm {
+
+  &__input {
+    border: solid 1px #bbb;
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #fff;
+    outline: none;
+  }
+
+  ::placeholder {
+    color: #bbb;
+  }
+
+  &__label {
+    display: block;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-block-end: 1rem;
+    }
+  }
+
+  &__checkbox {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid 1px #bbb;
+    margin-inline-end: 0.2rem;
+    background-color: #fff;
+
+    &:checked {
+      position: relative;
+
+      &::before {
+        content: "\f00c";
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        top: -2px;
+        left: 4px;
+      }
+    }
+  }
+
+  &__selectWrapper {
+    position: relative;
+
+    &::before {
+      content: "\f107";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 0.625rem;
+      right: 1rem;
+      color: #bbb;
+    }
+  }
+
+  &__select {
+    position: relative;
+    width: 100%;
+    padding: 0.5rem;
+    border: solid 1px #bbb;
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 0.5rem;
+    border: solid 1px #bbb;
+    background-color: #fff;
+    outline-style: none;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+
+  @include g.mq(sm-min) {
+
+    &__label {
+      display: inline-block;
+
+      &:not(:last-of-type) {
+        margin-inline-end: 1.5rem;
+      }
+    }
+
+    &__selectWrapper {
+      width: 40%;
+    }
+
+    &__btn {
+      width: 200px;
+    }
+  }
+}

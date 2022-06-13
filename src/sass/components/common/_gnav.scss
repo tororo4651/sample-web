@@ -1,0 +1,85 @@
+// グローバルナビゲーション
+
+
+// 変数、ミックスイン、関数
+@use "../../global" as g;
+
+
+.gNav {
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    width: 64px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25rem;
+    align-items: center;
+    font-size: 0.75rem;
+
+    &:hover {
+      background-color: g.$accentColor;
+    }
+
+    .home &--home,
+    .recruit &--recruit,
+    .form &--form {
+      background-color: #f8f6f2;
+
+      &:hover {
+        background-color: #f8f6f2;
+      }
+    }
+
+    &::before {
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 1.25rem;
+    }
+
+    &--home::before {
+      content: "\e3af";
+    }
+
+    &--recruit::before {
+      content: "\f03a";
+    }
+
+    &--form::before {
+      content: "\f56e";
+    }
+  }
+
+
+  @include g.mq('sm-min') {
+
+    &__list {
+      column-gap: 2rem;
+    }
+
+    &__link {
+      width: auto;
+      font-family: 'Sawarabi Mincho', serif;
+      font-size: 1.25rem;
+
+      &:hover {
+        background-color: initial;
+        border-bottom: solid 2px g.$mainColor;
+      }
+
+      .home &--home,
+      .recruit &--recruit,
+      .form &--form {
+        border-bottom: solid 2px g.$mainColor;
+        background-color: initial;
+      }
+
+      &::before {
+        content: normal;
+      }
+    }
+  }
+}
